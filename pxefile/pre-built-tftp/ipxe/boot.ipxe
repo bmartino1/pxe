@@ -1,0 +1,11 @@
+#!ipxe
+
+set base-url http://192.168.201.22/ipxe/
+
+kernel ${base-url}wimboot
+initrd ${base-url}winpe/bootmgr bootmgr
+initrd ${base-url}winpe/Boot/BCD BCD
+initrd ${base-url}winpe/Boot/boot.sdi boot.sdi
+initrd ${base-url}winpe/sources/boot.wim boot.wim
+boot
+
