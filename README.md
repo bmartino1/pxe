@@ -1,6 +1,15 @@
 # Disclaimer!
 Many thanks to [TheJames5's hiveos-pxe-diskless repository](https://github.com/TheJames5/hiveos-pxe-diskless). A lot of this project stems from a fork and fixes towards booting HiveOS diskless via PXE, which itself was forked from [panaceya's hiveos-pxe-diskless](https://github.com/panaceya/hiveos-pxe-diskless), originally forked from [minershive's hiveos-pxe-diskless](https://github.com/minershive/hiveos-pxe-diskless). Hiveon decided to change their support structure, charge more for usage, and not maintain or develop the code to work with their services.
 
+I have tar my working hive diskless pxe folder. a good 4.5 GB dowload to boot ubuntu 18 and run hive OS. I'm curently testing and using this on BC250 I ahve remvoed my rig.conf form the tar ball point the corect files to wehre you need them
+a build from [TheJames5's hiveos-pxe-diskless repository](https://github.com/TheJames5/hiveos-pxe-diskless)
+
+You will still need to install the servers!!!
+```
+wget https://1drv.ms/u/s!AgMyxFMOluEzngEHFYGLBOUhCHik?e=JKT65e
+tar -xvzf archive.tar.gz
+```
+
 ## Support the Project and Donate.
 If you found this helpful, please donate via [PayPal](https://www.paypal.com/donate/?business=PA3ZHF52483KW&no_recurring=1&item_name=Tech+Support+%2F+Health+%2F+Buy+Me+a+Coffee&currency_code=USD). You are free to edit, use, and distribute this code. Not all the code is my own work; it is a collection of contributions from many other projects to create a functional multi-purpose PXE server.
 
