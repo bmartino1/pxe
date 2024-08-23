@@ -1,7 +1,18 @@
 #!ipxe
 
-set base-url http://192.168.201.22/ipxe/
+:start
+menu iPXE Boot Menu
+item reboot     Reboot
+item winpe      Boot Windows PE
 
+choose --timeout 10000 --default reboot selected
+
+# Handle menu selection
+goto ${selected}
+
+:winpe
+echo Booting Windows PE...
+set base-url http://192.168.201.22/ipxe/
 kernel ${base-url}wimboot
 initrd ${base-url}winpe/bootmgr bootmgr
 initrd ${base-url}winpe/Boot/BCD BCD
@@ -9,3 +20,6 @@ initrd ${base-url}winpe/Boot/boot.sdi boot.sdi
 initrd ${base-url}winpe/sources/boot.wim boot.wim
 boot
 
+:reboot
+echo Rebooting...
+reboot
