@@ -5,13 +5,14 @@ menu iPXE Boot Menu
 item reboot     Reboot
 item winpe      Boot Windows PE
 
+#10 sec count down to reboot
 choose --timeout 10000 --default reboot selected
 
 # Handle menu selection
 goto ${selected}
 
 :winpe
-echo Booting Windows PE...
+echo Booting Windows PE... set ip to your server
 set base-url http://192.168.201.22/ipxe/
 kernel ${base-url}wimboot
 initrd ${base-url}winpe/bootmgr bootmgr
