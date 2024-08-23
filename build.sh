@@ -183,11 +183,25 @@ systemctl restart atftpd
 # Clean up and copy final files
 cp ./update-ip.sh $pxeserver_directory
 
-# Additional finalized steps (WIP)
-# Note: Copy prebuilt files and test configurations to /pxeserver
+# Copy GRUB EFI files
+echo -e "${CYAN}Copying pxe menu files${NOCOLOR}"
+if [[ -f /usr/lib/grub/x86_64-efi/grub.cfg ]]; then
+    cp /usr/lib/grub/x86_64-efi/grub.cfg $pxeserver_directory/tftp/efi/
+else
+    echo -e "${YELLOW}grub.cfg not found in /usr/lib/grub/x86_64-efi/. Using example file from the repository.${NOCOLOR}"
+    cp ./pxefile/menu_examples/grub.cfg $pxeserver_directory/tftp/efi/
+fi
 
-# Uncomment and edit the following lines when ready
-# cp ./pxefiles $pxeserver_directory
-# cp ./your_prebuilt_files $pxeserver_directory
+# Copy Syslinux menu.cfg
+echo -e "${CYAN}Copying Syslinux menu.cfg to BIOS folder${NOCOLOR}"
+cp ./pxefile/menu_examples/menu.cfg $pxeserver_directory/tftp/bios/
+
+# Copy iPXE boot.ipxe
+echo -e "${CYAN}Copying iPXE boot.ipxe to iPXE folder${NOCOLOR}"
+cp ./pxefile/menu_examples/boot.ipxe $pxeserver_directory/tftp/ipxe/
+
+# Additional configurations and final steps
+
 
 echo -e "${GREEN}PXE server setup completed successfully.${NOCOLOR}"
+echo -e "${YELLOW}PXE server Prox ready, please set dhcp next boot to /ipxe/boot.ipxe and tftp to the ip of this server...${NOCOLOR}"
