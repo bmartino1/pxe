@@ -49,7 +49,9 @@ cd pxe
 chmod 777 -R *
 ```
 ## run 1 of 2 scripts
+```
 ./depends.sh
+```
 
 ### Depends sh Script:
 This script will install the applications needed to run this server. It will download the latest pre-built binaries, create a folder structure, and prompt the end user for the directory path and the IP address of the server. We will require a TFTP server, HTTP server, and Samba server in the end.
