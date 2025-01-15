@@ -1,14 +1,6 @@
 # Disclaimer!
-Many thanks to [TheJames5's hiveos-pxe-diskless repository](https://github.com/TheJames5/hiveos-pxe-diskless). A lot of this project stems from a fork and fixes towards booting HiveOS diskless via PXE, which itself was forked from [panaceya's hiveos-pxe-diskless](https://github.com/panaceya/hiveos-pxe-diskless), originally forked from [minershive's hiveos-pxe-diskless](https://github.com/minershive/hiveos-pxe-diskless). Hiveon decided to change their support structure, charge more for usage, and not maintain or develop the code to work with their services.
-
-I have tarred my working Hive diskless PXE folder—a good 4.5 GB download to boot Ubuntu 18 and run Hive OS. I'm currently testing and using this on BC250. I have removed my `rig.conf` from the tarball, pointing the correct files to where you need them from a build inspired by [TheJames5's hiveos-pxe-diskless repository](https://github.com/TheJames5/hiveos-pxe-diskless).
-
-You will still need to install the servers!
-
-```
-wget https://1drv.ms/u/s!AgMyxFMOluEzngEHFYGLBOUhCHik?e=JKT65e
-tar -xvzf archive.tar.gz
-```
+Many thanks to [TheJames5's hiveos-pxe-diskless repository](https://github.com/TheJames5/hiveos-pxe-diskless). A lot of this project stems from a fork and fixes towards booting HiveOS diskless via PXE, which itself was forked from [panaceya's hiveos-pxe-diskless](https://github.com/panaceya/hiveos-pxe-diskless), originally forked from [minershive's hiveos-pxe-diskless](https://github.com/minershive/hiveos-pxe-diskless). Hiveon decided to change their support structure, charge more for usage, and not maintain or develop the code to work with their services. Pointing the correct files to where you need them from a build inspired by [TheJames5's hiveos-pxe-diskless repository](https://github.com/TheJames5/hiveos-pxe-diskless).
+* You will still need to install the servers!
 
 ## Support the Project and Donate.
 
